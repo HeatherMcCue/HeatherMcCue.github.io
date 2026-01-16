@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Communications Leadership | Fractional Director Services</title>
+    <title>Heather McCue | Fractional Director of Strategic Communications</title>
     <style>
         * {
             margin: 0;
@@ -12,151 +12,179 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
+            background: #ffffff;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
         /* Header & Navigation */
         header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
+            background: #001f3f;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: white;
             letter-spacing: -0.5px;
         }
         
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
         
         .nav-links a {
-            color: white;
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
         
         .nav-links a:hover {
-            color: #3498db;
+            color: white;
         }
         
         /* Hero Section */
         .hero {
-            background: #001f3f;
+            background: linear-gradient(135deg, #001f3f 0%, #003d7a 100%);
             color: white;
-            padding: 6rem 0;
-            text-align: center;
+            padding: 140px 0 100px 0;
+            margin-top: 72px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
             font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
         }
         
         .hero p {
             font-size: 1.3rem;
-            margin-bottom: 2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
+            font-weight: 400;
         }
         
         .cta-button {
             display: inline-block;
             background: white;
             color: #001f3f;
-            padding: 1rem 2.5rem;
+            padding: 16px 40px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
         
         /* Sections */
         section {
-            padding: 5rem 0;
+            padding: 100px 0;
         }
         
-        section:nth-child(even) {
+        .section-light {
+            background: #ffffff;
+        }
+        
+        .section-gray {
             background: #f8f9fa;
         }
         
         h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #001f3f;
+            letter-spacing: -0.5px;
         }
         
         .section-intro {
             font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-            max-width: 800px;
+            color: #555;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            line-height: 1.7;
         }
         
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
         }
         
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0,31,63,0.1);
+            border-color: #001f3f;
         }
         
         .service-card h3 {
             color: #001f3f;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
         
         .service-card ul {
             list-style: none;
-            margin-top: 1rem;
         }
         
         .service-card li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
+            padding: 0.6rem 0;
+            padding-left: 1.8rem;
             position: relative;
+            color: #333;
+            font-size: 0.95rem;
         }
         
         .service-card li:before {
@@ -165,112 +193,194 @@
             left: 0;
             color: #001f3f;
             font-weight: bold;
+            font-size: 1.1rem;
         }
         
         /* About Section */
-        .about-content {
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            gap: 5rem;
+            align-items: start;
+        }
+        
+        .about-text p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
         }
         
         .about-text h3 {
             color: #001f3f;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 600;
         }
         
-        .expertise-list {
+        .expertise-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .expertise-item {
-            padding: 1rem;
-            background: white;
-            border-radius: 5px;
+            padding: 1.2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
             border-left: 3px solid #001f3f;
+            font-size: 0.95rem;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .clients-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .clients-box h4 {
+            font-size: 1.3rem;
+            color: #001f3f;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .clients-box ul {
+            list-style: none;
+        }
+        
+        .clients-box li {
+            padding: 0.7rem 0;
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .clients-box li:before {
+            content: "✓ ";
+            color: #001f3f;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .working-model {
+            background: #001f3f;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+        
+        .working-model h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .working-model p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
         }
         
         /* Contact Section */
-        .contact-content {
-            max-width: 600px;
+        .contact-wrapper {
+            max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
         
-        .contact-info {
+        .contact-card {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            margin-top: 3rem;
         }
         
-        .contact-info p {
-            margin: 1rem 0;
-            font-size: 1.1rem;
+        .contact-card p {
+            font-size: 1.15rem;
+            margin: 1.5rem 0;
+            color: #333;
         }
         
-        .contact-info a {
+        .contact-card a {
             color: #001f3f;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.2rem;
         }
         
-        /* Legal Section */
-        .legal-content {
-            max-width: 800px;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .contact-card a:hover {
+            text-decoration: underline;
         }
         
-        .legal-content h3 {
-            color: #001f3f;
+        .contact-note {
             margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .legal-content p {
-            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: #666;
         }
         
         /* Footer */
         footer {
-            background: #2c3e50;
+            background: #001f3f;
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        
+        footer p:first-child {
+            margin-bottom: 0.5rem;
         }
         
         /* Responsive */
+        @media (max-width: 968px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .hero p {
                 font-size: 1.1rem;
             }
             
+            h2 {
+                font-size: 2.2rem;
+            }
+            
             .nav-links {
-                width: 100%;
-                margin-top: 1rem;
-                justify-content: center;
-                gap: 1rem;
+                gap: 1.5rem;
+                font-size: 0.9rem;
             }
             
-            .about-content {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            .expertise-list {
+            .expertise-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 60px 0;
             }
         }
     </style>
@@ -278,7 +388,7 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Strategic Communications</div>
+            <div class="logo">Heather McCue</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -290,21 +400,23 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>Fractional Director of Strategic Communications</h1>
-            <p>Technical messaging, strategic alignment, and communication systems for growing organizations</p>
-            <a href="#contact" class="cta-button">Let's Talk</a>
+            <div class="hero-content">
+                <h1>Fractional Director of Strategic Communications</h1>
+                <p>I help growing organizations build clarity, alignment, and impact through strategic communications leadership—without the full-time overhead.</p>
+                <a href="#contact" class="cta-button">Let's Talk</a>
+            </div>
         </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="section-light">
         <div class="container">
             <h2>Services</h2>
-            <p class="section-intro">I partner with US-based organizations to build clarity, alignment, and impact through strategic communications leadership.</p>
+            <p class="section-intro">I partner with US-based organizations to translate complexity into clarity through technical messaging, strategic alignment, and communication systems.</p>
             
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Fractional Communications Leadership</h3>
-                    <p>Strategic communication guidance without the full-time commitment. Perfect for organizations needing executive-level communications support.</p>
+                    <p>Executive-level strategic guidance without the full-time commitment.</p>
                     <ul>
                         <li>Monthly strategic retainers</li>
                         <li>Executive communication counsel</li>
@@ -315,43 +427,43 @@
                 
                 <div class="service-card">
                     <h3>Technical & Proposal Messaging</h3>
-                    <p>Transform complex technical concepts into clear, compelling narratives that win business and drive decisions.</p>
+                    <p>Transform complex concepts into compelling narratives that win business.</p>
                     <ul>
                         <li>Proposal & capture messaging</li>
                         <li>Technical translation</li>
-                        <li>Executive decks & presentations</li>
+                        <li>Executive presentations</li>
                         <li>Competitive positioning</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
-                    <h3>Company Handbooks & Documentation</h3>
-                    <p>Build the internal communication infrastructure your growing company needs to scale effectively.</p>
+                    <h3>Company Handbooks</h3>
+                    <p>Build the internal communication infrastructure your company needs to scale.</p>
                     <ul>
                         <li>Employee handbooks</li>
                         <li>Policy documentation</li>
                         <li>Process guides</li>
-                        <li>Internal knowledge systems</li>
+                        <li>Knowledge systems</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
                     <h3>BRIDGE Methodology</h3>
-                    <p>My signature framework for AI-integrated communication workflows and executive clarity.</p>
+                    <p>My signature framework for AI-integrated communication workflows.</p>
                     <ul>
                         <li>Strategic communication planning</li>
                         <li>AI workflow integration</li>
                         <li>Team training & workshops</li>
-                        <li>Communication system design</li>
+                        <li>System design</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
                     <h3>Strategic Communication Plans</h3>
-                    <p>Comprehensive roadmaps that align messaging across your organization and stakeholders.</p>
+                    <p>Comprehensive roadmaps that align messaging across your organization.</p>
                     <ul>
-                        <li>Communication strategy development</li>
-                        <li>Stakeholder mapping & analysis</li>
+                        <li>Communication strategy</li>
+                        <li>Stakeholder mapping</li>
                         <li>Message architecture</li>
                         <li>Channel strategy</li>
                     </ul>
@@ -359,7 +471,7 @@
                 
                 <div class="service-card">
                     <h3>Training & Facilitation</h3>
-                    <p>Equip your teams with the communication skills and systems they need to thrive.</p>
+                    <p>Equip your teams with the skills and systems they need to thrive.</p>
                     <ul>
                         <li>BRIDGE methodology training</li>
                         <li>Time management workshops</li>
@@ -371,54 +483,59 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="section-gray">
         <div class="container">
             <h2>About</h2>
-            <div class="about-content">
+            <div class="about-grid">
                 <div class="about-text">
                     <p>I'm a strategic communications leader specializing in technical messaging, stakeholder alignment, and AI-integrated communication workflows. With a background in government-adjacent work and business development, I help organizations translate complexity into clarity.</p>
                     
                     <p>My approach combines strategic thinking with tactical execution. Whether it's building a company handbook for a growing plumbing business, crafting proposal messaging for government contracts, or implementing communication systems for distributed teams, I bring clarity and structure to the work that moves organizations forward.</p>
                     
                     <h3>Core Expertise</h3>
-                    <div class="expertise-list">
+                    <div class="expertise-grid">
                         <div class="expertise-item">Strategic Communications</div>
                         <div class="expertise-item">Technical Translation</div>
-                        <div class="expertise-item">Proposal & Capture Messaging</div>
+                        <div class="expertise-item">Proposal Messaging</div>
                         <div class="expertise-item">Executive Communication</div>
                         <div class="expertise-item">AI-Integrated Workflows</div>
-                        <div class="expertise-item">Team Systems Building</div>
+                        <div class="expertise-item">Systems Building</div>
                         <div class="expertise-item">Stakeholder Alignment</div>
                         <div class="expertise-item">Internal Documentation</div>
                     </div>
                 </div>
                 
-                <div class="about-image">
-                    <p><strong>Clients I Serve:</strong></p>
-                    <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="padding: 0.5rem 0;">✓ US government-adjacent small businesses</li>
-                        <li style="padding: 0.5rem 0;">✓ Tech companies & AI/ML startups</li>
-                        <li style="padding: 0.5rem 0;">✓ Digital transformation teams</li>
-                        <li style="padding: 0.5rem 0;">✓ Professional services firms</li>
-                        <li style="padding: 0.5rem 0;">✓ Growing businesses needing structure</li>
-                    </ul>
+                <div>
+                    <div class="clients-box">
+                        <h4>Clients I Serve</h4>
+                        <ul>
+                            <li>US government-adjacent small businesses</li>
+                            <li>Tech companies & AI/ML startups</li>
+                            <li>Digital transformation teams</li>
+                            <li>Professional services firms</li>
+                            <li>Growing businesses needing structure</li>
+                        </ul>
+                    </div>
                     
-                    <p style="margin-top: 2rem;"><strong>Working Model:</strong></p>
-                    <p>I work remotely, serving US-based clients across time zones. My fractional model means you get executive-level strategic communications leadership without the full-time overhead.</p>
+                    <div class="working-model">
+                        <h4>Working Model</h4>
+                        <p>I work remotely, serving US-based clients across time zones. My fractional model means you get executive-level strategic communications leadership without the full-time overhead.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section-light">
         <div class="container">
-            <div class="contact-content">
+            <div class="contact-wrapper">
                 <h2>Get In Touch</h2>
                 <p class="section-intro">Ready to bring clarity and strategic direction to your communications? Let's talk about how fractional leadership can work for your organization.</p>
                 
-                <div class="contact-info">
-                    <p><strong>Email:</strong> <a href="mailto:heathermccue@icloud.com">heathermccue@icloud.com</a></p>
-                    <p style="margin-top: 2rem; font-size: 0.95rem; color: #666;">I typically respond within 24 hours during US business hours.</p>
+                <div class="contact-card">
+                    <p><strong>Email</strong></p>
+                    <p><a href="mailto:heathermccue@icloud.com">heathermccue@icloud.com</a></p>
+                    <p class="contact-note">I typically respond within 24 hours during US business hours.</p>
                 </div>
             </div>
         </div>
@@ -426,8 +543,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Strategic Communications Leadership. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Fractional Communications Services | Serving US Clients</p>
+            <p>&copy; 2025 Heather McCue. All rights reserved.</p>
+            <p>Fractional Communications Services | Serving US Clients</p>
         </div>
     </footer>
 </body>
