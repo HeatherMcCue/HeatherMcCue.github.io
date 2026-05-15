@@ -1,205 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heather McCue | ESL Tutoring & Reiki Healing Sessions</title>
-    <style>
-        /* ——— YOUR ORIGINAL STYLES (unchanged) ——— */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; line-height: 1.6; color: #1a1a1a; background: #ffffff; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        header { background: #001f3f; padding: 1.5rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4rem; font-weight: 600; color: white; letter-spacing: -0.5px; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
-        .nav-links a:hover { color: white; }
-        .hero { background: linear-gradient(135deg, #001f3f 0%, #003d7a 100%); color: white; padding: 140px 0 100px 0; margin-top: 72px; }
-        .hero-content { max-width: 800px; }
-        .hero h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -1px; }
-        .hero p { font-size: 1.3rem; line-height: 1.6; margin-bottom: 2.5rem; opacity: 0.95; font-weight: 400; }
-        .cta-button { display: inline-block; background: white; color: #001f3f; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.05rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(0,0,0,0.25); }
-        section { padding: 100px 0; }
-        .section-light { background: #ffffff; }
-        .section-gray { background: #f8f9fa; }
-        h2 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #001f3f; letter-spacing: -0.5px; }
-        .section-intro { font-size: 1.2rem; color: #555; margin-bottom: 4rem; max-width: 700px; line-height: 1.7; }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-        .service-card { background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e5e7eb; transition: all 0.3s; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,31,63,0.1); border-color: #001f3f; }
-        .service-card h3 { color: #001f3f; margin-bottom: 1rem; font-size: 1.4rem; font-weight: 600; }
-        .service-card p { color: #555; margin-bottom: 1.5rem; line-height: 1.6; }
-        .service-card ul { list-style: none; }
-        .service-card li { padding: 0.6rem 0; padding-left: 1.8rem; position: relative; color: #333; font-size: 0.95rem; }
-        .service-card li:before { content: "✓"; position: absolute; left: 0; color: #001f3f; font-weight: bold; font-size: 1.1rem; }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-        .about-text p { color: #555; margin-bottom: 1.5rem; line-height: 1.7; font-size: 1.05rem; }
-        .about-text h3 { color: #001f3f; margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 600; }
-        .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
-        .expertise-item { padding: 1.2rem; background: #f8f9fa; border-radius: 8px; border-left: 3px solid #001f3f; font-size: 0.95rem; color: #333; font-weight: 500; }
-        .clients-box { background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e5e7eb; }
-        .clients-box h4 { font-size: 1.3rem; color: #001f3f; margin-bottom: 1.5rem; font-weight: 600; }
-        .clients-box ul { list-style: none; }
-        .clients-box li { padding: 0.7rem 0; color: #555; font-size: 1rem; }
-        .clients-box li:before { content: "✓ "; color: #001f3f; font-weight: bold; margin-right: 0.5rem; }
-        .working-model { background: #001f3f; color: white; padding: 2.5rem; border-radius: 12px; margin-top: 2rem; }
-        .working-model h4 { font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600; }
-        .working-model p { color: rgba(255,255,255,0.9); line-height: 1.7; }
-        .contact-wrapper { max-width: 700px; margin: 0 auto; text-align: center; }
-        .contact-card { background: white; padding: 3rem; border-radius: 12px; border: 1px solid #e5e7eb; margin-top: 3rem; }
-        .contact-card p { font-size: 1.15rem; margin: 1.5rem 0; color: #333; }
-        .contact-card a { color: #001f3f; text-decoration: none; font-weight: 600; font-size: 1.2rem; }
-        .contact-card a:hover { text-decoration: underline; }
-        .contact-note { margin-top: 2rem; font-size: 0.95rem; color: #666; }
-        footer { background: #001f3f; color: white; text-align: center; padding: 3rem 0; }
-        footer p { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
-        footer p:first-child { margin-bottom: 0.5rem; }
-        @media (max-width: 968px) { .services-grid { grid-template-columns: repeat(2, 1fr); } .about-grid { grid-template-columns: 1fr; gap: 3rem; } }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .hero p { font-size: 1.1rem; } h2 { font-size: 2.2rem; } .nav-links { gap: 1.5rem; font-size: 0.9rem; } .services-grid { grid-template-columns: 1fr; } .expertise-grid { grid-template-columns: 1fr; } section { padding: 60px 0; } }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Heather McCue Strategic Communications Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Strategic communications and proposal development consulting for technology, public-sector, and international organizations." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #1f4f7b;
+      --accent-light: #e6f0fa;
+      --muted: #666666;
+      --border: #dddddd;
+      --max-width: 900px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .brand {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    main { padding-bottom: 3rem; }
+
+    h1, h2, h3 {
+      color: var(--accent);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    h1 { font-size: 1.8rem; margin-top: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.05rem; }
+
+    p { margin: 0.4rem 0; }
+
+    .hero {
+      margin-top: 1rem;
+      padding: 1.25rem;
+      border-radius: 8px;
+      background: var(--accent-light);
+      border: 1px solid #d2e0f4;
+    }
+
+    .hero-strong { font-weight: 600; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 800px) {
+      .grid-2 { grid-template-columns: 1.4fr 1fr; }
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.4rem 0;
+    }
+
+    li { margin: 0.2rem 0; }
+
+    .section-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      background: #ffffff;
+    }
+
+    .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-block {
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-block a:hover { text-decoration: underline; }
+
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-right: 0.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer .container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Heather McCue</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="brand">Heather McCue Strategic Communications Consulting</div>
+        <div class="tagline">Strategic communications, proposal development, and content leadership for complex, high‑stakes environments.</div>
+      </div>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>ESL Tutoring & Reiki Healing Sessions</h1>
-                <p>Personalized, supportive sessions designed to help you grow — whether you're building English fluency or seeking grounding, clarity, and energetic balance.</p>
-                <a href="#contact" class="cta-button">Book a Session</a>
-            </div>
+  <main>
+    <div class="container">
+
+      <!-- HERO -->
+      <section class="hero">
+        <p class="label">Overview</p>
+        <p class="hero-strong">
+          Senior strategic communications and proposal development consulting for technology companies, public‑sector organizations, and international teams.
+        </p>
+        <p>
+          I help organizations communicate complex technical, operational, and policy information with clarity and precision. My work supports decision‑making, competitive funding, modernization initiatives, and cross‑border collaboration.
+        </p>
+        <p>
+          I currently maintain an established U.S.‑based anchor client through a long‑term strategic communications and proposal development retainer. This work will continue uninterrupted during and after my relocation to Belgium, forming the foundation for expansion into the Belgian and EU markets.
+        </p>
+      </section>
+
+      <!-- SERVICES + SECTORS -->
+      <section class="grid grid-2">
+        <div class="section-card">
+          <p class="label">Services</p>
+          <h2>What I Do</h2>
+          <ul>
+            <li><strong>Strategic communications planning</strong> for complex, technical, or regulated environments</li>
+            <li><strong>Proposal and bid development</strong> for competitive procurement and funding opportunities</li>
+            <li><strong>Executive messaging and thought leadership</strong> for senior leaders and founders</li>
+            <li><strong>Content strategy and content operations</strong> for distributed and cross‑border teams</li>
+            <li><strong>Stakeholder and partner communications</strong> across public, private, and international actors</li>
+            <li><strong>Change‑management communications</strong> for digital transformation and modernization initiatives</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section-light">
-        <div class="container">
-            <h2>Services</h2>
-            <p class="section-intro">I offer personalized ESL tutoring and virtual Reiki healing sessions. Each session begins with an open conversation — and for Reiki, intention-setting — to ensure your experience is supportive, meaningful, and tailored to your goals.</p>
-
-            <div class="services-grid">
-
-                <!-- ESL Tutoring -->
-                <div class="service-card">
-                    <h3>ESL Tutoring</h3>
-                    <p>Supportive, structured English lessons for learners of all ages and levels.</p>
-                    <ul>
-                        <li>Conversational fluency</li>
-                        <li>Reading & writing development</li>
-                        <li>Business & professional English</li>
-                        <li>Academic support (PreK–12 & AP)</li>
-                    </ul>
-                </div>
-
-                <!-- Reiki -->
-                <div class="service-card">
-                    <h3>Reiki Healing Sessions</h3>
-                    <p>Virtual Reiki sessions focused on grounding, clarity, and emotional balance.</p>
-                    <ul>
-                        <li>Intention-setting & guided grounding</li>
-                        <li>Energy balancing</li>
-                        <li>Stress reduction & emotional support</li>
-                        <li>500+ hours of virtual Reiki experience</li>
-                    </ul>
-                </div>
-
-                <!-- Teaching Support -->
-                <div class="service-card">
-                    <h3>Academic & Writing Support</h3>
-                    <p>Personalized help for students who want to strengthen their skills and confidence.</p>
-                    <ul>
-                        <li>Essay coaching</li>
-                        <li>Reading comprehension</li>
-                        <li>Study skills & organization</li>
-                        <li>Long-term academic support</li>
-                    </ul>
-                </div>
-
-            </div>
+        <div class="section-card">
+          <p class="label">Sectors & Clients</p>
+          <h2>Who I Work With</h2>
+          <ul>
+            <li>Technology and digital‑transformation companies</li>
+            <li>Federal contractors and government‑adjacent entities</li>
+            <li>International development organizations</li>
+            <li>Public‑sector agencies and modernization programs</li>
+            <li>SMEs seeking to scale or internationalize</li>
+          </ul>
+          <p style="margin-top:0.6rem;">
+            Engagements are structured as ongoing retainers or clearly scoped project‑based work.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section-gray">
-        <div class="container">
-            <h2>About</h2>
-
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>I am an ESL tutor and Reiki practitioner with a background in education, writing, and healing work. My approach is warm, supportive, and grounded in helping each student or client feel seen, heard, and empowered.</p>
-
-                    <p>For ESL students, I focus on building confidence, fluency, and clear communication. For Reiki clients, I create a calm, intentional space for grounding, emotional balance, and energetic alignment.</p>
-
-                    <h3>Qualifications</h3>
-                    <div class="expertise-grid">
-                        <div class="expertise-item">5 years teaching & tutoring</div>
-                        <div class="expertise-item">TEFL 160-hour certificate</div>
-                        <div class="expertise-item">TEYL 40-hour certificate</div>
-                        <div class="expertise-item">Advanced English Online Teaching</div>
-                        <div class="expertise-item">CBEST certified</div>
-                        <div class="expertise-item">Bachelor of Science</div>
-                        <div class="expertise-item">20+ years writing & editing</div>
-                        <div class="expertise-item">500+ hours virtual Reiki</div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="clients-box">
-                        <h4>Who I Work With</h4>
-                        <ul>
-                            <li>ESL learners of all ages</li>
-                            <li>PreK–12 students & AP learners</li>
-                            <li>Business professionals</li>
-                            <li>Adults seeking Reiki healing</li>
-                            <li>Students needing reading/writing support</li>
-                        </ul>
-                    </div>
-
-                    <div class="working-model">
-                        <h4>My Approach</h4>
-                        <p>Every session begins with conversation — and for Reiki, intention-setting — to ensure your experience is personal, supportive, and aligned with your goals. I work virtually with students and clients across the U.S. and internationally.</p>
-                    </div>
-                </div>
-            </div>
+      <!-- EXPERIENCE + CASES -->
+      <section class="grid">
+        <div class="section-card">
+          <p class="label">Experience</p>
+          <h2>Selected Background</h2>
+          <ul>
+            <li>20+ years in strategic communications, proposal development, and content leadership</li>
+            <li>Secured more than <strong>$5M in USAID funding</strong> through high‑stakes proposal development</li>
+            <li>Led communications for U.S. Department of Veterans Affairs modernization initiatives</li>
+            <li>Former Chief Communications Officer for an international consultancy</li>
+            <li>Extensive experience supporting remote, globally distributed teams</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section-light">
-        <div class="container">
-            <div class="contact-wrapper">
-                <h2>Get In Touch</h2>
-                <p class="section-intro">Whether you're seeking ESL support or a grounding Reiki session, I’d love to connect and learn more about your goals.</p>
+        <div class="section-card">
+          <p class="label">Representative Work</p>
+          <h2>Case Examples (Redacted)</h2>
 
-                <div class="contact-card">
-                    <p><strong>Email</strong></p>
-                    <p><a href="mailto:heathermccue@icloud.com">heathermccue@icloud.com</a></p>
-                    <p class="contact-note">I typically respond within 24 hours.</p>
-                </div>
-            </div>
+          <h3>International Development Proposal (USAID)</h3>
+          <p>
+            Led strategy, narrative development, and compliance alignment for a complex, multi‑partner proposal that resulted in more than <strong>$5M in awarded funding</strong>. Responsibilities included win‑theme development, storyboarding, and final narrative integration.
+          </p>
+
+          <h3>Public‑Sector Modernization Communications</h3>
+          <p>
+            Supported communications for a large‑scale modernization initiative within a major public‑sector agency, translating technical and policy changes into clear, stakeholder‑focused messaging for internal and external audiences.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Heather McCue. All rights reserved.</p>
-            <p>ESL Tutoring & Reiki Healing Services</p>
+      <!-- APPROACH -->
+      <section class="section-card">
+        <p class="label">Approach</p>
+        <h2>How I Work</h2>
+        <p>
+          I combine structured proposal and capture methodologies with executive‑level communications experience. My work emphasizes clarity, alignment, and repeatable processes that reduce friction for busy teams and decision‑makers.
+        </p>
+        <p>
+          I operate as an embedded strategic partner, a fractional communications lead, or a project‑based specialist for high‑stakes opportunities.
+        </p>
+        <div style="margin-top:0.75rem;">
+          <span class="pill">Strategic communications</span>
+          <span class="pill">Proposal development</span>
+          <span class="pill">Executive messaging</span>
+          <span class="pill">Content operations</span>
+          <span class="pill">International & cross‑cultural work</span>
         </div>
-    </footer>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact-block">
+        <p class="label">Contact</p>
+        <h2>Let’s Talk</h2>
+        <p>
+          For inquiries about retainers, project‑based engagements, or partnerships in the U.S., Belgium, or the EU, you can reach me at:
+        </p>
+        <p>
+          Email: <a href="mailto:heathermccue@icloud.com">heathermccue@icloud.com</a>
+        </p>
+        <p>
+          I am currently based in Washington State, USA, with planned relocation to Bruges, Belgium, where I will continue supporting U.S. clients while expanding into the Belgian and EU markets.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Heather McCue Strategic Communications Consulting. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
